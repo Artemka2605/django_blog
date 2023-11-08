@@ -22,9 +22,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-publish']  # сортировка по полю даты публикации в обратном порядке (сначала новые посты)
-        indexes = [
-            models.Index(fields=['-publish']),
-        ]
+
 
     def __str__(self):
         return self.title
